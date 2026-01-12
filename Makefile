@@ -14,12 +14,16 @@ help:
 	@echo "  make clean     - clean up build artifacts"
 
 # Update module dependencies: add missing deps and removes unused ones
-tidy:
+mod:
 	$(GO) mod tidy
 
 # Formats all of the code in the project
-fmt:
+format:
 	$(GO) fmt ./...
+
+# Runs static analysis on code
+vet:
+	$(GO) vet ./...
 
 # Run all tests
 test:
