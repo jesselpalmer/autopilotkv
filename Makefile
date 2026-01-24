@@ -8,7 +8,7 @@ help:
 	@echo "Targets:"
 	@echo "  make mod       - ensure go.mod/go.sum match imports (go mod tidy)"
 	@echo "  make format    - format code (go fmt ./...)"
-	@echo "  make vet       - run vet checks (go vet ./...)"
+	@echo "  make lint      - run vet checks (go vet ./...)"
 	@echo "  make test      - run tests (go tests ./...)"
 	@echo "  make build     - build binaries into ./$(BIN_DIR) (autopilotkvd, apkv, apkvctl)"
 	@echo "  make clean     - clean up build artifacts"
@@ -22,7 +22,7 @@ format:
 	$(GO) fmt ./...
 
 # Runs static analysis on code
-vet:
+lint:
 	$(GO) vet ./...
 
 # Run all tests
