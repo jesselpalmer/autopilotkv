@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package api.proto.v1;
+
+message RequestMetadata {
+  string client_id = 1;
+  string request_id = 2;
+}
+
+message ResponseMetadata {
+  uint revision = 1;
+  uint64 applied_index = 2;
+  uint64 commit_index = 3;
+}
